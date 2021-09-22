@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  
+    "scripts": {
+      "start:prod": "cross-env PORT=3000 NODE_ENV=production nodemon server.js",
+      "start": "node server.js",
+      "dev": "nodemon server.js",
+      "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+      "watch:prod": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    },
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
