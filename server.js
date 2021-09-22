@@ -42,6 +42,6 @@ app.get("/inquiry", async(req , res) => {
     })
 })
 
-app.listen(9000, () => {
-    console.log("server started");
+app.listen(process.env.PORT, () => {
+    console.log("server started @ port " + process.env.PORT);
 })
