@@ -1,0 +1,14 @@
+extend base
+
+
+block content 
+    .container
+        each form in forms 
+            
+                .box 
+                    h3.header= `Name : ${form.name}`
+                    h3.header= `Email : ${form.email}`
+                    h3.header= `Phone : ${form.phone}`
+                    h3.header= `Message : ${form.message}`
+                    h3.header= `Date : ${form.date}`
+    
