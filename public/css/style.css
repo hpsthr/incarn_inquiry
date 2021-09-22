@@ -28,3 +28,42 @@
     font-family: montserrat;
     font-size: 15px;
 }
+.delete {
+    width:6rem;
+    height:2.5rem;
+    background:rgb(248, 103, 77);
+    color:rgb(255, 255, 255);
+    font-family: montserrat;
+    font-weight:600;
+    font-size:17px;
+    border-radius: 14px;
+    border: none;
+    margin-bottom:2rem;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    font-family:montserrat;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.6rem 15rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  
+  .alert--success {
+    background-color: #20bf6b;
+  }
+  
+  .alert--error {
+    background-color: #eb4d4b;
+  }

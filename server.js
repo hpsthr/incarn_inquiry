@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/incarn", async(req , res) => {
-    console.log(req.body.data);
+    
     await Form.create({
         name : req.body.data.name,
         email: req.body.data.email,
@@ -35,10 +35,18 @@ app.post("/incarn", async(req , res) => {
 
 app.get("/inquiry", async(req , res) => {
 
-    const form = await Form.find()
+    const form = await Form.find().sort("-date")
     
     res.status(200).render("inquiry", {
         forms:form
+    })
+})
+
+app.delete("/delete/:id", async(req, res) => {
+    const id = req.params.id
+    const update = await Form.findByIdAndDelete(id)
+    res.status(200).json({
+        status:"success"
     })
 })
 
