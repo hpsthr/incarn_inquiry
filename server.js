@@ -42,6 +42,7 @@ app.get("/inquiry", async(req , res) => {
     })
 })
 
-app.listen(process.env.PORT, () => {
-    console.log("server started @ port " + process.env.PORT);
+const port = process.env.PORT || 3030
+app.listen(port, () => {
+    console.log("server started @ port " + port);
 })
