@@ -1,4 +1,5 @@
-const dotenv = require('dotenv').config({path: './config.env',});
+const dotenv = require('dotenv')
+dotenv.config();
 const express = require("express")
 const Form  = require("./DatabaseModal")
 const path = require("path")
